@@ -1,0 +1,182 @@
+
+.roady-ui-pre-header {
+    background: #161518;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    /**
+     * Evenly space horizontal menu inspired by solution found on stackoverflow:
+     *
+     * @see https://stackoverflow.com/questions/23226888/horizontal-list-items-fit-to-100-with-even-spacing
+     *
+     */
+    menu {
+        align-items: stretch;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    li {
+        display: block;
+        flex: 0 1 auto;
+        margin: 0 1rem;
+        padding: 0.5rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration-color: var(--primary-color-loud, orange);
+        text-decoration-line: underline;
+        text-decoration-style: double;
+        text-decoration-thickness: 0.1rem;
+        text-underline-offset: 0.5rem;
+    }
+}
+
+.roady-ui-main-content {
+    margin: 0 4rem;
+}
+
+.roady-ui-header {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/*** ***/
+
+.roady-ui-main-content {
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.circles li{
+    animation: animate 37s linear infinite;
+    background: rgba(255, 255, 255, 0.2);
+    bottom: -150px;
+    display: block;
+    font-family: monospace;
+    font-size: 1.17rem;
+    list-style: none;
+    padding: 2rem;
+    position: absolute;
+    text-align: center;
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 4s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 6s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 5s;
+    animation-duration: 17s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 10s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 18s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 11s;
+    animation-duration: 32s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 28s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 20s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        background: gray;
+        border: 0rem groove gray;
+        opacity: 0.5;
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50%{
+        border-radius: 50%;
+        border: 5rem groove black;
+        opacity: 0.000017;
+        transform: translateY(-1000px) rotate(720deg);
+    }
+
+    100%{
+        background: black;
+        border: none;
+        opacity: 0;
+        border-radius: 100%;
+        font-size: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+}
