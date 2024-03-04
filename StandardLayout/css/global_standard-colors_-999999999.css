@@ -1,0 +1,19 @@
+html {
+    color-scheme: dark light;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color-loud: red;
+        --primary-color-normal: white;
+        --primary-color-quiet: gray;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --primary-color-loud: blue;
+        --primary-color-normal: black;
+        --primary-color-quiet: gray;
+    }
+}
