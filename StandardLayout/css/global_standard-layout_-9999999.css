@@ -1,6 +1,11 @@
 
+body {
+    margin: 0 25%;
+}
+
 .roady-ui-pre-header {
     background: #161518;
+    margin-top: 1rem;
     position: sticky;
     top: 0;
     z-index: 2000;
