@@ -73,6 +73,7 @@
     padding: 2rem;
     position: absolute;
     text-align: center;
+    opacity: 0;
 }
 
 .circles li:nth-child(1){
@@ -158,8 +159,11 @@
     0%{
         background: gray;
         border: 0rem groove gray;
-        opacity: 0.5;
         transform: translateY(0) rotate(0deg);
+    }
+
+    12%{
+        opacity: 0.5;
     }
 
     50%{
