@@ -1,63 +1,50 @@
+@keyframes animate {
+
+    0%{
+        background: gray;
+        border: 0rem groove gray;
+        transform: translateY(0) rotate(0deg);
+    }
+
+    12%{
+        opacity: 0.5;
+    }
+
+    50%{
+        border-radius: 50%;
+        border: 5rem groove black;
+        opacity: 0.000017;
+        transform: translateY(-1000px) rotate(720deg);
+    }
+
+    100%{
+        background: black;
+        border-radius: 100%;
+        border: none;
+        font-size: 0;
+        margin: 0;
+        opacity: 0;
+        padding: 0;
+    }
+
+}
 
 body {
     letter-spacing: 0.1rem;
-    margin: 0 17vw;
-    font-size: 1.09rem;
+    font-size: 1rem;
+    padding: 1vw;
+    margin: 0 27vw;
 }
 
-@media (prefers-color-scheme: dark) {
-
-    h1, h2, h3, h4 {
-        font-family: 'Ubuntu', sans-serif;
-        letter-spacing: 0.7rem;
-        text-shadow: -6px -6px #161518,
-                     -5px -5px #161518,
-                     -4px -4px #161518,
-                     -3px -3px #161518,
-                     -2px -2px #161518,
-                     -1px -1px #161518,
-                     1px 1px #161518,
-                     2px 2px #161518,
-                     3px 3px #161518,
-                     4px 4px;
-    }
-
-    .roady-ui-pre-header {
-        background: #161518;
-    }
-
-    .roady-ui-main-content {
-        p {
-            background: #161518;
-            opacity: 87%;
-        }
-    }
-}
-
-@media (prefers-color-scheme: light) {
-
-    h1, h2, h3, h4 {
-        font-family: 'Ubuntu', sans-serif;
-        letter-spacing: 0.7rem;
-        text-shadow: -6px -6px #ffffff,
-                     -5px -5px #ffffff,
-                     -4px -4px #ffffff,
-                     -3px -3px #ffffff,
-                     -2px -2px #ffffff,
-                     -1px -1px #ffffff,
-                     1px 1px #ffffff,
-                     2px 2px #ffffff,
-                     3px 3px #ffffff,
-                     4px 4px;
-    }
-
-    .roady-ui-pre-header {
-        background: #ffffff;
-    }
-}
 .roady-ui-pre-header {
+    min-width: 315px;
     position: sticky;
     top: 0;
+    z-index: 2000;
+    border: 0.2rem inset #000000;
+    border-radius: 0.5rem;
+    overflow: auto;
+
     /**
      * Evenly space horizontal menu inspired by solution found on stackoverflow:
      *
@@ -71,8 +58,6 @@ body {
     }
 
     li {
-        display: block;
-        flex: 0 1 auto;
         padding: 1rem;
     }
 
@@ -90,6 +75,7 @@ body {
 }
 
 .roady-ui-main-content {
+    min-width: 315px;
     img,
     picture {
         border-radius: 0.5rem;
@@ -97,13 +83,15 @@ body {
     }
 
     p {
+        border: 0.2rem inset #000000;
         border-radius: 0.5rem;
-        border: 0.1rem solid #000000;
-        padding: 1rem;
+        padding: 3.3rem;
+        min-width: 100%;
     }
 }
 
 .roady-ui-header {
+    min-width: 315px;
     font-size: 1.5rem;
     text-align: center;
 
@@ -140,7 +128,6 @@ body {
     opacity: 0;
     padding: 2rem;
     position: absolute;
-    text-align: center;
 }
 
 .circles li:nth-child(1){
@@ -219,36 +206,76 @@ body {
     width: 150px;
 }
 
+@media (prefers-color-scheme: dark) {
 
-
-@keyframes animate {
-
-    0%{
-        background: gray;
-        border: 0rem groove gray;
-        transform: translateY(0) rotate(0deg);
+    h1, h2, h3, h4 {
+        font-family: 'Ubuntu', sans-serif;
+        letter-spacing: 0.7rem;
+        text-shadow: -6px -6px #161518,
+                     -5px -5px #161518,
+                     -4px -4px #161518,
+                     -3px -3px #161518,
+                     -2px -2px #161518,
+                     -1px -1px #161518,
+                     1px 1px #161518,
+                     2px 2px #161518,
+                     3px 3px #161518,
+                     4px 4px;
     }
 
-    12%{
-        opacity: 0.5;
+    .roady-ui-pre-header {
+        background: #161518;
     }
 
-    50%{
-        border-radius: 50%;
-        border: 5rem groove black;
-        opacity: 0.000017;
-        transform: translateY(-1000px) rotate(720deg);
+    .roady-ui-main-content {
+        p {
+            background: #161518;
+            opacity: 87%;
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    h1, h2, h3, h4 {
+        letter-spacing: 0.7rem;
+        text-shadow: -6px -6px #ffffff,
+                     -5px -5px #ffffff,
+                     -4px -4px #ffffff,
+                     -3px -3px #ffffff,
+                     -2px -2px #ffffff,
+                     -1px -1px #ffffff,
+                     1px 1px #ffffff,
+                     2px 2px #ffffff,
+                     3px 3px #ffffff,
+                     4px 4px;
     }
 
-    100%{
-        background: black;
-        border-radius: 100%;
+    .roady-ui-pre-header {
+        background: #ffffff;
+    }
+}
+
+@media only screen and (max-width: 1425px) {
+
+    body {
+        margin: 0 7vw;
+    }
+
+    .roady-ui-pre-header{
+        position: static;
+        background: none;
         border: none;
-        font-size: 0;
-        margin: 0;
-        opacity: 0;
-        padding: 0;
+        menu {
+            flex-direction: column;
+        }
+
+        li {
+            border-bottom: 0.1rem solid white;
+        }
+
     }
 
 }
+
 
