@@ -2,8 +2,11 @@
 body {
     letter-spacing: 0.1rem;
     margin: 0 17vw;
+}
+
+@media (prefers-color-scheme: dark) {
+
     h1, h2, h3, h4 {
-        color: #f7cfc8;
         font-family: 'Ubuntu', sans-serif;
         letter-spacing: 0.7rem;
         text-shadow: -6px -6px #161518,
@@ -17,14 +20,36 @@ body {
                      3px 3px #161518,
                      4px 4px;
     }
-}
-@media (prefers-color-scheme: dark) {
+
     .roady-ui-pre-header {
         background: #161518;
+    }
+
+    .roady-ui-main-content {
+        p {
+            background: #161518;
+            opacity: 87%;
+        }
     }
 }
 
 @media (prefers-color-scheme: light) {
+
+    h1, h2, h3, h4 {
+        font-family: 'Ubuntu', sans-serif;
+        letter-spacing: 0.7rem;
+        text-shadow: -6px -6px #ffffff,
+                     -5px -5px #ffffff,
+                     -4px -4px #ffffff,
+                     -3px -3px #ffffff,
+                     -2px -2px #ffffff,
+                     -1px -1px #ffffff,
+                     1px 1px #ffffff,
+                     2px 2px #ffffff,
+                     3px 3px #ffffff,
+                     4px 4px;
+    }
+
     .roady-ui-pre-header {
         background: #ffffff;
     }
@@ -67,14 +92,13 @@ body {
 .roady-ui-main-content {
     img,
     picture {
-        border-radius: 1rem;
-        border: 0.2rem solid #f7cfc8;
+        border-radius: 0.5rem;
         margin-top: 1rem;
     }
 
     p {
-        border-radius: 1rem;
-        border: 0.2rem solid #f7cfc8;
+        border-radius: 0.5rem;
+        border: 0.1rem solid #000000;
         padding: 1rem;
     }
 }
