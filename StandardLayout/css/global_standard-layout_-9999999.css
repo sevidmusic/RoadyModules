@@ -2,6 +2,7 @@
 body {
     letter-spacing: 0.1rem;
     margin: 0 17vw;
+    font-size: 1.09rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,7 +68,6 @@ body {
         align-items: stretch;
         display: flex;
         justify-content: space-between;
-        padding: 0;
     }
 
     li {
