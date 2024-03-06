@@ -39,3 +39,9 @@ h1, h2, h3, h4 {
     font-family: monospace;
     font-size: 1.17rem;
 }
+
+.roady-ui-main-content {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
