@@ -1,4 +1,9 @@
 
+body {
+    padding: 1vw;
+    margin: 0 27vw;
+}
+
 .roady-ui-pre-header {
     z-index: 2000;
     overflow: auto;
@@ -20,5 +25,72 @@
     li {
         padding: 1rem;
     }
+}
+
+.roady-ui-main-content {
+    img,
+    picture {
+        margin-top: 1rem;
+    }
+
+    p {
+        padding: 3.3rem;
+    }
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    z-index: -2000;
+    left: 0;
+}
+
+.circles li {
+    bottom: -150px;
+    display: block;
+    list-style: none;
+    opacity: 0;
+    padding: 2rem;
+    position: absolute;
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+}
+
+.circles li:nth-child(2){
+    left: 10%;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
 }
 
