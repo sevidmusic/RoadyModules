@@ -20,10 +20,6 @@
     width: 100%;
 }
 
-.circles li{
-    background: rgba(255, 255, 255, 0.2);
-}
-
 .circles li:nth-child(1){
     height: 80px;
     width: 80px;

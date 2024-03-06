@@ -16,7 +16,6 @@ h1, h2, h3, h4 {
     }
 
     a:hover {
-        text-decoration-color: var(--primary-color-loud, orange);
         text-decoration-line: underline;
         text-decoration-style: double;
         text-decoration-thickness: 0.1rem;
