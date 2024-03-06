@@ -4,7 +4,17 @@ body {
     margin: 0 27vw;
 }
 
+p {
+    padding: 3.3rem;
+}
+
+p,
 .roady-ui-pre-header {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.roady-ui-pre-header {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     z-index: 2000;
     overflow: auto;
     position: sticky;
@@ -30,11 +40,7 @@ body {
 .roady-ui-main-content {
     img,
     picture {
-        margin-top: 1rem;
-    }
-
-    p {
-        padding: 3.3rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -96,10 +102,9 @@ body {
 
 @media (prefers-color-scheme: dark) {
 
+    .roady-ui-pre-header,
     .roady-ui-main-content {
-        p {
-            opacity: 87%;
-        }
+        opacity: 87%;
     }
 
 }
