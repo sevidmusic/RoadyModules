@@ -100,14 +100,11 @@ p,
     left: 85%;
 }
 
-@media (prefers-color-scheme: dark) {
-
-    .roady-ui-pre-header,
-    .roady-ui-main-content {
-        opacity: 87%;
-    }
-
+.roady-ui-pre-header,
+.roady-ui-main-content {
+    opacity: 87%;
 }
+
 
 @media only screen and (max-width: 1425px) {
 
